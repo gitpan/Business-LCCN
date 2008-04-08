@@ -1,6 +1,6 @@
 ---
 name: Business-LCCN
-version: 0.10
+version: 0.11
 author:
   - 'Anirvan Chatterjee <anirvan@cpan.org>'
 abstract: Work with Library of Congress Control Number (LCCN) codes
@@ -14,7 +14,7 @@ build_requires:
 provides:
   Business::LCCN:
     file: lib/Business/LCCN.pm
-    version: 0.10
+    version: 0.11
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

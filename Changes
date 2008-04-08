@@ -1,4 +1,7 @@
 Revision history for Business-LCCN
 
-0.01    2008-04-06
+0.11    2008-04-08
+        Documented "original" method, minor internal code cleanlineess
+
+0.10    2008-04-06
         First version

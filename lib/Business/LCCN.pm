@@ -13,11 +13,11 @@ Business::LCCN - Work with Library of Congress Control Number (LCCN) codes
 
 =head1 VERSION
 
-Version 0.10
+Version 0.11
 
 =cut
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 =head1 SYNOPSIS
 
@@ -328,8 +328,12 @@ sub _canonical {
         }
 
         return $string;
+    } else {    # should never get here
+        return '';
     }
 }
+
+no Moose;       # remove Moose keywords
 
 # normalize documented at http://www.loc.gov/marc/lccn-namespace.html
 # and http://lccn.loc.gov/lccnperm-faq.html
@@ -533,6 +537,10 @@ representation of S<"n  85-000002 ">, S<"n85-2">, S<"n  85-0000002">.
 
 Returns the info: URI for an LCCN. For example, the URI for LCCN
 S<"n  85-000002 "> is S<"info:lccn/n85000002">.
+
+=head3 C<original>
+
+Returns the original representation of the LCCN, as passed to C<new>.
 
 =head3 C<permalink>
 

@@ -5,7 +5,9 @@ WriteMakefile
           'NAME' => 'Business::LCCN',
           'VERSION_FROM' => 'lib/Business/LCCN.pm',
           'PREREQ_PM' => {
+                           'Carp' => '0',
                            'Moose' => '0.34',
+                           'Moose::Util::TypeConstraints' => '0',
                            'Test::More' => '0',
                            'URI' => '1.19'
                          },

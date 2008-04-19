@@ -1,5 +1,8 @@
 Revision history for Business-LCCN
 
+0.12    2008-04-19
+        Put pod coverage test in todo mode
+
 0.11    2008-04-08
         Documented "original" method, minor internal code cleanlineess
 

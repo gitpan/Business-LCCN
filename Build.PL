@@ -8,7 +8,9 @@ my $builder = Module::Build->new(
     dist_author         => 'Anirvan Chatterjee <anirvan@cpan.org>',
     dist_version_from   => 'lib/Business/LCCN.pm',
     build_requires => {
+	'Carp' => 0,
 	'Moose' => 0.34,
+	'Moose::Util::TypeConstraints' => 0,
         'Test::More' => 0,
 	'URI' => 1.19,
     },

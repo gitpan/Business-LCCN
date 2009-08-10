@@ -13,11 +13,11 @@ Business::LCCN - Work with Library of Congress Control Number (LCCN) codes
 
 =head1 VERSION
 
-Version 0.12
+Version 1.00
 
 =cut
 
-our $VERSION = '0.12';
+our $VERSION = '1.00';
 
 =head1 SYNOPSIS
 
@@ -78,7 +78,7 @@ enum 'LCCN_Structure' => qw( A B );
 subtype 'LCCN_Normalized' => as 'Str' =>
     where {m/^(?:[a-z](?:[a-z](?:[a-z]|\d{2})?|\d\d)?|\d\d)?\d{8}$/};
 subtype 'URI' => as 'Object' => where { $_->isa('URI') };
-coerce 'URI'  => from 'Str'  => via   { URI->new($_) };
+coerce 'URI' => from 'Str' => via { URI->new($_) };
 
 has 'original' => ( is => 'ro', isa => 'Maybe[Str]', required => 1 );
 has 'lccn_structure' =>
@@ -365,7 +365,7 @@ sub _overload_equality {
     my ( $self, $other ) = @_;
 
     my $other_lccn;
-    if ( blessed($other) and $other->isa('Business::LCCN') ) {
+    if ( ref($other) and blessed($other) and $other->isa('Business::LCCN') ) {
         $other_lccn = $other;
     } else {
         $other_lccn = new Business::LCCN($other);

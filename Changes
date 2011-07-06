@@ -1,5 +1,8 @@
 Revision history for Business-LCCN
 
+1.01    2011-07-05
+        Import Scalar::Util's blessed
+
 1.00    2009-08-10
         Call ref before using Moose::blessed; tests show some broken blessed
 

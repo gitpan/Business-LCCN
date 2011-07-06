@@ -3,6 +3,7 @@ use 5.6.1;
 use Carp qw( carp );
 use Moose;
 use Moose::Util::TypeConstraints;
+use Scalar::Util qw( blessed );
 use URI;
 use strict;
 use warnings;
@@ -13,11 +14,11 @@ Business::LCCN - Work with Library of Congress Control Number (LCCN) codes
 
 =head1 VERSION
 
-Version 1.00
+Version 1.01
 
 =cut
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 =head1 SYNOPSIS
 
